@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Sistema Equipamentos</string>
+    <string name="title_activity_main">Sistema Equipamentos</string>
+    <string name="package_name">com.empresa.equipamentos</string>
+    <string name="custom_url_scheme">com.empresa.equipamentos</string>
+</resources>

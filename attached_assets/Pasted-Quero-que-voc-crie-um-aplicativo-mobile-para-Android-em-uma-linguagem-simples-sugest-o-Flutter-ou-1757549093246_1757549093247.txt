@@ -1,0 +1,108 @@
+Quero que você crie um aplicativo mobile para Android em uma linguagem simples (sugestão: Flutter ou React Native) para que eu consiga fazer alterações futuras sem dificuldades. O aplicativo será utilizado para cadastro e gerenciamento de equipamentos de informática.
+
+🔹 Estrutura do Projeto
+
+O app não deve salvar os dados localmente, pois será usado em vários dispositivos ao mesmo tempo.
+Por isso, o backend deverá disponibilizar uma API (REST) que o aplicativo irá consumir. Essa API será responsável por:
+
+Autenticação de usuários (login/logout).
+
+CRUD de clientes, usuários e equipamentos (computadores e nobreaks).
+
+Controle de permissões (administradores x usuários comuns).
+
+Geração dos nomes sequenciais automáticos para os equipamentos (P0001, P0002 para computadores e N0001, N0002 para nobreaks).
+
+Armazenamento de fotos dos equipamentos (upload via API).
+
+🔹 Funcionalidades do App
+
+Tela de Login
+
+Login com e-mail e senha.
+
+Autenticação integrada com a API.
+
+Perfis de usuários:
+
+Administrador → pode cadastrar novos clientes, cadastrar usuários e deletar qualquer informação.
+
+Usuário comum → pode cadastrar/alterar/listar equipamentos, mas não pode criar clientes nem excluir registros.
+
+Tela Inicial (após login)
+
+Menu com opções: Cadastrar, Alterar, Listar e Deletar.
+
+Cadastrar
+
+Perguntar o que deseja cadastrar: Cliente / Usuário / Equipamento.
+
+Para Equipamento, perguntar se é Computador ou Nobreak.
+
+Formulário Computador
+
+Cliente (selecionar cliente já cadastrado)
+
+Marca
+
+Modelo
+
+Nº de Série
+
+Setor
+
+Operador
+
+Observação
+
+Foto (abrir câmera do celular e enviar para API)
+
+Botão Salvar
+
+Após salvar, a API retorna o nome gerado automaticamente (exemplo: P0001). Esse nome deve ser exibido na tela até o usuário confirmar com "OK".
+
+Formulário Nobreak
+
+Cliente (selecionar cliente já cadastrado)
+
+Marca
+
+Modelo
+
+Nº de Série
+
+Data da Bateria
+
+Setor
+
+Observação
+
+Foto (abrir câmera do celular e enviar para API)
+
+Botão Salvar
+
+Após salvar, a API retorna o nome gerado automaticamente (exemplo: N0001). Esse nome deve ser exibido na tela até o usuário confirmar com "OK".
+
+Listar
+
+O app deve consumir da API a lista de registros já cadastrados (computadores, nobreaks, clientes e usuários).
+
+Opção de filtro e busca.
+
+Alterar
+
+Selecionar registro existente (via API) e editar informações.
+
+Deletar
+
+Somente administradores podem excluir registros.
+
+Exclusão deve ser feita via API.
+
+🔹 Observações Técnicas
+
+O banco de dados será no backend (pode ser MySQL, PostgreSQL ou Firebase Firestore, conforme recomendação).
+
+O app se comunica apenas via API → nada é salvo localmente, exceto sessão temporária de login.
+
+Código deve ser organizado, comentado e escalável, para que eu possa modificar no futuro.
